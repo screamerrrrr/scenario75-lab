@@ -133,7 +133,7 @@ interactively).
    Authentication bypass anomaly
    ```
 
-## 5. Root Cause & Remediation Notes (for the presentation)
+## 5. Root Cause & Remediation Notes
 
 - Bind session cookies to device/origin (e.g. signed, short-lived tokens
   tied to IP/User-Agent fingerprint or a secondary proof-of-possession),
