@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  admin-feedback-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: scenario75-admin-feedback
+    restart: unless-stopped
+    ports:
+      - "3075:3075"
+    environment:
+      - PORT=3075
+      - LOG_DIR=/opt/admin/logs
+    volumes:
+      # Host bind mount so the Blue Team can inspect logs directly on the
+      # Proxmox VM at /opt/admin/logs without exec-ing into the container.
+      - /opt/admin/logs:/opt/admin/logs
+    networks:
+      - feedback-net
+
+networks:
+  feedback-net:
+    driver: bridge

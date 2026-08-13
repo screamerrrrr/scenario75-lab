@@ -1,0 +1,13 @@
+{
+  "name": "admin-feedback-system",
+  "version": "1.0.0",
+  "description": "SCENARIO75 - Intentionally vulnerable Admin Feedback System (Cookie Reuse & MFA Bypass) for Red/Blue CTF training. FOR ISOLATED LAB USE ONLY.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cookie-parser": "^1.4.6"
+  }
+}
